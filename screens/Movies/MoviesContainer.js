@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Button } from "react-native";
-import { movieApi } from "../api";
+import { movieApi } from "../../api";
+import MoviesPresenter from "./MoviesPresenter";
 
 export default () => {
   //api 데이터들을 불러오고 랜더하는 과정
   const [movies, setMovies] = useState({
+    loading: true,
     nowPlaying: [],
     popular: [],
     upcoming: [],
@@ -17,6 +19,7 @@ export default () => {
     const [popular, popularError] = await movieApi.popular();
     const [upcoming, upcomingError] = await movieApi.upcoming();
     setMovies({
+      loading: false,
       nowPlaying,
       popular,
       upcoming,
@@ -29,9 +32,5 @@ export default () => {
     getData();
   }, []);
 
-  return (
-    <View style={{ flex: 1, backgroundColor: "black" }}>
-      <Text style={{ color: "white" }}>{movies.nowPlaying?.length}</Text>
-    </View>
-  );
+  return <MoviesPresenter {...movies} />;
 };

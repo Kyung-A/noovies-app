@@ -39,3 +39,6 @@ export const tvApi = {
   search: (query) => getAnything("/search/tv", { query }),
   show: (id) => getAnything(`/tv/${id}`),
 };
+
+//포스터 이미지 API
+export const apiImage = (path) => `https://image.tmdb.org/t/p/w500${path}`;
