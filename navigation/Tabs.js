@@ -11,7 +11,7 @@ const Tabs = createBottomTabNavigator();
 
 //ES2020에 추가된 문법인 optional chaining ?. 연산자
 const getHeaderName = (route) =>
-  route?.state?.routeNames[route.state.index] || "최신영화";
+  route?.state?.routeNames[route.state.index] || "Noovies";
 // index 0은 undefind이다. 그럴 경우 || Movies로 뜨게한다
 
 export default ({ navigation, route }) => {
@@ -55,8 +55,8 @@ export default ({ navigation, route }) => {
         },
       }}
     >
-      <Tabs.Screen name="최신영화" component={Movies} />
       <Tabs.Screen name="TV" component={Tv} />
+      <Tabs.Screen name="최신영화" component={Movies} />
       <Tabs.Screen name="검색" component={Search} />
       <Tabs.Screen name="즐겨찾기" component={Favs} />
     </Tabs.Navigator>

@@ -15,7 +15,7 @@ const Container = styled.View`
 
 const Data = styled.View`
   align-items: flex-start;
-  width: 63%;
+  width: 60%;
   margin-left: 30px;
 `;
 
@@ -38,6 +38,7 @@ const Overview = styled.Text`
   opacity: 0.7;
 `;
 
+// 수직(세로) 컨텐츠 부분 (api 불러오기)
 const Horizontal = ({ id, title, overview, poster, releaseDate }) => (
   <TouchableOpacity>
     <Container>
@@ -56,7 +57,7 @@ const Horizontal = ({ id, title, overview, poster, releaseDate }) => (
 );
 
 Horizontal.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   poster: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,

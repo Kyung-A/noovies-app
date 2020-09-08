@@ -17,7 +17,7 @@ const Title = styled.Text`
   margin: 10px 0px 5px 0px;
 `;
 
-//인기영화 컨텐츠 부분
+//가로 슬라이드 컨텐츠 부분(api 불러오기)
 const Vertical = ({ id, poster, title, votes }) => (
   <TouchableOpacity>
     <Container>
@@ -29,7 +29,7 @@ const Vertical = ({ id, poster, title, votes }) => (
 );
 
 Vertical.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   poster: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   votes: PropTypes.number.isRequired,
