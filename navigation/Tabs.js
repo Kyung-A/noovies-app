@@ -55,8 +55,8 @@ export default ({ navigation, route }) => {
         },
       }}
     >
-      <Tabs.Screen name="TV" component={Tv} />
       <Tabs.Screen name="최신영화" component={Movies} />
+      <Tabs.Screen name="TV" component={Tv} />
       <Tabs.Screen name="검색" component={Search} />
       <Tabs.Screen name="즐겨찾기" component={Favs} />
     </Tabs.Navigator>

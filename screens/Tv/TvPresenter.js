@@ -10,8 +10,8 @@ const Container = styled.View`
   margin-top: 30px;
 `;
 
-export default ({ loading, popular, topRated, today }) => (
-  <ScrollContainer loading={loading}>
+export default ({ refreshFn, loading, popular, topRated, today }) => (
+  <ScrollContainer refreshFn={refreshFn} loading={loading}>
     <Container>
       <HorizontalSlider title="현재 인기 프로그램">
         {popular.map((show) => (

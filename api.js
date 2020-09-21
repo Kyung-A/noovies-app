@@ -41,4 +41,7 @@ export const tvApi = {
 };
 
 //포스터 이미지 API
-export const apiImage = (path) => `https://image.tmdb.org/t/p/w500${path}`;
+export const apiImage = (path) =>
+  path
+    ? `https://image.tmdb.org/t/p/w500${path}`
+    : "https://underscoremusic.co.uk/site/wp-content/uploads/2014/05/no-poster.jpg";

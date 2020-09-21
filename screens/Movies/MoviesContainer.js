@@ -3,6 +3,7 @@ import { movieApi } from "../../api";
 import MoviesPresenter from "./MoviesPresenter";
 
 export default () => {
+  const [refreshing, setRefresing] = useState(false);
   //api 데이터들을 불러오고 랜더하는 과정
   const [movies, setMovies] = useState({
     loading: true,
@@ -31,5 +32,5 @@ export default () => {
     getData();
   }, []);
 
-  return <MoviesPresenter {...movies} />;
+  return <MoviesPresenter refreshFn={getData} {...movies} />;
 };

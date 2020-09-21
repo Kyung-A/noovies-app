@@ -26,7 +26,7 @@ export default function App() {
   //미리 로딩을 시작하는 함수. loadAssets는 promise를 리턴해야만 한다.
   const loadAssets = () => {
     const images = cacheImages([
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397442735866005503%2F&psig=AOvVaw0m3uFFYl4rqoPPrR3oG13T&ust=1598942065647000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjMrsHpxOsCFQAAAAAdAAAAABAJ",
+      "https://underscoremusic.co.uk/site/wp-content/uploads/2014/05/no-poster.jpg",
       require("./assets/splash.png"),
     ]);
     const fonts = cacheFonts([Ionicons.font]);
